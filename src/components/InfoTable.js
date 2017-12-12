@@ -23,12 +23,14 @@ class InfoTable extends React.Component {
 
     componentDidMount() {
         this.updateTable();
+        //setInterval(this.updateTable, 10000);
     }
 
     updateTable() {
+        console.log("update table");
         this.setState({
             total: 0
-        })
+        });
         this.updateBTC().then(response => {
             this.setState({
                 btc_data : response

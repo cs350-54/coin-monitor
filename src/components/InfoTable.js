@@ -78,8 +78,10 @@ class InfoTable extends React.Component {
                         volume: Config.BUYING.volume.BCT,
                     buying: Config.BUYING.price.BCT,
                     current: response.bid,
+                    buy_total: Config.BUYING.volume.BCT * Config.BUYING.price.BCT,
                     total: Config.BUYING.volume.BCT * response.bid,
-                    profit: Config.BUYING.volume.BCT *(response.bid - Config.BUYING.price.BCT)
+                    profit: Config.BUYING.volume.BCT *(response.bid - Config.BUYING.price.BCT),
+                    percentage: (response.bid/Config.BUYING.price.BCT - 1) * 100
                 }
             }
         });
@@ -100,8 +102,10 @@ class InfoTable extends React.Component {
                     buying: Config.BUYING.price.BCH,
                     current: response.bid,
                     total: Config.BUYING.volume.BCH * response.bid,
+                    buy_total: Config.BUYING.volume.BCH * Config.BUYING.price.BCH,
 
-                    profit: Config.BUYING.volume.BCH *(response.bid - Config.BUYING.price.BCH)
+                    profit: Config.BUYING.volume.BCH *(response.bid - Config.BUYING.price.BCH),
+                    percentage: (response.bid/Config.BUYING.price.BCH - 1) * 100
                 }
             }
         });
@@ -122,8 +126,10 @@ class InfoTable extends React.Component {
                     buying: Config.BUYING.price.BTG,
                     current: response.bid,
                     total: Config.BUYING.volume.BTG * response.bid,
+                    buy_total: Config.BUYING.volume.BTG * Config.BUYING.price.BTG,
 
-                    profit: Config.BUYING.volume.BTG *(response.bid - Config.BUYING.price.BTG)
+                    profit: Config.BUYING.volume.BTG *(response.bid - Config.BUYING.price.BTG),
+                    percentage: (response.bid/Config.BUYING.price.BTG - 1) * 100
                 }
             }
         });
@@ -144,8 +150,10 @@ class InfoTable extends React.Component {
                     buying: Config.BUYING.price.XRP,
                     current: response[0].price_cad,
                     total: Config.BUYING.volume.XRP * response[0].price_cad,
+                    buy_total: Config.BUYING.volume.XRP * Config.BUYING.price.XRP,
 
-                    profit: Config.BUYING.volume.XRP *(response[0].price_cad - Config.BUYING.price.XRP)
+                    profit: Config.BUYING.volume.XRP *(response[0].price_cad - Config.BUYING.price.XRP),
+                    percentage: (response[0].price_cad/Config.BUYING.price.XRP - 1) * 100
                 }
             }
         });
@@ -165,8 +173,10 @@ class InfoTable extends React.Component {
                     buying: Config.BUYING.price.ADA,
                     current: response[0].price_cad,
                     total: Config.BUYING.volume.ADA * response[0].price_cad,
+                    buy_total: Config.BUYING.volume.ADA * Config.BUYING.price.ADA,
 
-                    profit: Config.BUYING.volume.ADA *(response[0].price_cad - Config.BUYING.price.ADA)
+                    profit: Config.BUYING.volume.ADA *(response[0].price_cad - Config.BUYING.price.ADA),
+                    percentage: (response[0].price_cad/Config.BUYING.price.ADA - 1) * 100
                 }
             }
         });
@@ -186,8 +196,10 @@ class InfoTable extends React.Component {
                     buying: Config.BUYING.price.XLM,
                     current: response[0].price_cad,
                     total: Config.BUYING.volume.XLM * response[0].price_cad,
+                    buy_total: Config.BUYING.volume.XLM * Config.BUYING.price.XLM,
 
-                    profit: Config.BUYING.volume.XLM *(response[0].price_cad - Config.BUYING.price.XLM)
+                    profit: Config.BUYING.volume.XLM *(response[0].price_cad - Config.BUYING.price.XLM),
+                    percentage: (response[0].price_cad/Config.BUYING.price.XLM - 1) * 100
                 }
             }
         });

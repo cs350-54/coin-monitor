@@ -22,6 +22,11 @@ const column = [
         accessor: d => d.current
     },
     {
+        Header: 'B_Total',
+        id: 'buy_total',
+        accessor: d => d.buy_total
+    },
+    {
         Header: 'Total',
         id: 'total',
         accessor: d => d.total
@@ -30,6 +35,21 @@ const column = [
         Header: 'Profit',
         id: 'profit',
         accessor: d => d.profit,
+        Cell: props => {
+            const Profit = props.value < 0
+                ? <span style={{color: 'red'}}>{props.value}</span>
+                : <span style={{color: 'green'}}>{props.value}</span>;
+            return (
+                <div>
+                    {Profit}
+                </div>
+            );
+        },
+    },
+    {
+        Header: '%',
+        id: 'percentage',
+        accessor: d => d.percentage,
         Cell: props => {
             const Profit = props.value < 0
                 ? <span style={{color: 'red'}}>{props.value}</span>

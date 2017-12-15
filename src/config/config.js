@@ -8,11 +8,11 @@ export const Config = {
     },
     BUYING: {
         volume: {
-            BCT: 0.01518033,
+            BCT: 0.01868841,
             BCH: 2.16452302,
             BTG: 11,
             XRP: 1618.20942878,
-            XLM: 2454.2757,
+            XLM: 2000,
             ADA: 2500
         },
         price: {
